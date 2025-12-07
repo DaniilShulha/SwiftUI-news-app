@@ -7,32 +7,27 @@
 
 import Foundation
 
-// Общий ответ от сервера
 struct NewsResponse: Codable {
     let status: String
     let results: [Article]
 }
 
-// Сама статья
 struct Article: Codable, Identifiable, Hashable {
     let id: Int
     let title: String
     let abstract: String
-    let url: String // Ссылка на полную статью
+    let url: String
     let publishedDate: String
     let media: [ArticleMedia]?
     let section: String
     
-    // Для удобства маппинга JSON -> Swift (camelCase)
     enum CodingKeys: String, CodingKey {
         case id, title, abstract, url, media, section
         case publishedDate = "published_date"
     }
     
-    // Хелпер: достать картинку лучшего качества
     var imageUrl: URL? {
         guard let mediaItems = media?.first?.mediaMetadata else { return nil }
-        // Берем картинку с самым большим разрешением (обычно последняя в массиве)
         return URL(string: mediaItems.last?.url ?? "")
     }
     
@@ -52,7 +47,6 @@ struct Article: Codable, Identifiable, Hashable {
     )
 }
 
-// Медиа-контейнер
 struct ArticleMedia: Codable, Hashable {
     let mediaMetadata: [MediaMetadata]
     
@@ -61,7 +55,6 @@ struct ArticleMedia: Codable, Hashable {
     }
 }
 
-// Метаданные картинки
 struct MediaMetadata: Codable, Hashable {
     let url: String
     let height: Int

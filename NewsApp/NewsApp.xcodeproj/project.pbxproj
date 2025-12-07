@@ -20,6 +20,7 @@
 		AB7B0C742EE48FCE0074D71E /* ArticleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7B0C732EE48FCE0074D71E /* ArticleRowView.swift */; };
 		AB7B0C762EE48FDE0074D71E /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7B0C752EE48FDD0074D71E /* SafariView.swift */; };
 		AB7B0C782EE48FED0074D71E /* AdRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7B0C772EE48FED0074D71E /* AdRowView.swift */; };
+		ABB0D1FC2EE5C5A500A7AF4C /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0D1FB2EE5C5A500A7AF4C /* PersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		AB7B0C732EE48FCE0074D71E /* ArticleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRowView.swift; sourceTree = "<group>"; };
 		AB7B0C752EE48FDD0074D71E /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		AB7B0C772EE48FED0074D71E /* AdRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdRowView.swift; sourceTree = "<group>"; };
+		ABB0D1FB2EE5C5A500A7AF4C /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				AB7B0C642EE47A690074D71E /* ViewModels */,
 				AB7B0C632EE47A4F0074D71E /* Services */,
 				AB7B0C4D2EE478660074D71E /* NewsAppApp.swift */,
+				ABB0D1FB2EE5C5A500A7AF4C /* PersistenceManager.swift */,
 				AB7B0C512EE478690074D71E /* Assets.xcassets */,
 				AB7B0C532EE478690074D71E /* Preview Content */,
 			);
@@ -199,6 +202,7 @@
 				AB7B0C502EE478660074D71E /* ContentView.swift in Sources */,
 				AB7B0C762EE48FDE0074D71E /* SafariView.swift in Sources */,
 				AB7B0C662EE47A760074D71E /* NewsListViewModel.swift in Sources */,
+				ABB0D1FC2EE5C5A500A7AF4C /* PersistenceManager.swift in Sources */,
 				AB7B0C5C2EE479920074D71E /* NewsModels.swift in Sources */,
 				AB7B0C782EE48FED0074D71E /* AdRowView.swift in Sources */,
 				AB7B0C682EE47B190074D71E /* ListModels.swift in Sources */,
@@ -348,6 +352,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,6 +382,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

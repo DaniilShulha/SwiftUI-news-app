@@ -7,12 +7,22 @@
 
 import SwiftUI
 
-struct SafariView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+import SwiftUI
+import SafariServices
+
+struct SafariView: UIViewControllerRepresentable {
+    let url: URL
+    
+    func makeUIViewController(context: Context) -> SFSafariViewController {
+        let vc = SFSafariViewController(url: url)
+        return vc
+    }
+    
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: Context) {
     }
 }
 
 #Preview {
-    SafariView()
+    SafariView(url: URL(string: "https://www.nytimes.com/2025/04/18/business/trump-harvard-letter-mistake.html")!)
+        .ignoresSafeArea()
 }

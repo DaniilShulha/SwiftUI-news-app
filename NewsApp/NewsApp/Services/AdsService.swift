@@ -7,18 +7,15 @@
 
 import Foundation
 
-// Используем те же ошибки, что и в NewsService
-
 actor AdsService {
-    // Твое имя для авторизации (Замени на свои данные!)
-    private let authHeaderValue = "Daniil-Shulha" // !!! ОБЯЗАТЕЛЬНО ЗАМЕНИ !!!
+   
+    private let authHeaderValue = "Daniil-Shulha"
     
     func fetchAds() async throws -> [AdBlock] {
         guard let url = URL(string: "https://us-central1-server-side-functions.cloudfunctions.net/supplementary") else {
             throw NetworkError.invalidURL
         }
         
-        // Настраиваем Request + Header
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue(authHeaderValue, forHTTPHeaderField: "Authorization")
@@ -30,7 +27,6 @@ actor AdsService {
             throw NetworkError.invalidResponse
         }
         
-        // Декодируем (обрати внимание, что декодируем AdBlocksResponse)
         do {
             let decodedResponse = try JSONDecoder().decode(AdBlocksResponse.self, from: data)
             return decodedResponse.results

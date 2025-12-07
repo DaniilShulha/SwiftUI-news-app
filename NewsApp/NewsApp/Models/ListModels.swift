@@ -7,7 +7,6 @@
 
 import Foundation
 
-// Enum для создания гетерогенного (разнородного) списка в SwiftUI
 enum ListItem: Identifiable, Hashable {
     case news(Article)
     case ad(AdBlock)
