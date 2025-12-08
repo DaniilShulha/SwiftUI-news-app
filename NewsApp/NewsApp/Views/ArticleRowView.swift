@@ -109,10 +109,11 @@ struct ArticleRowView: View {
                 onBlockedToggle()
             }
             Button("Cancel", role: .cancel) {}
-            
         } message: {
             Text("Confirm to unblock this news source")
+            
         }
+        
     }
 }
 
